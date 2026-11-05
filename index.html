@@ -107,7 +107,7 @@
   }
   .verse {
     font-family: "Amiri", serif; font-weight: 400;
-    font-size: clamp(15px, 2.2vh, 20px); line-height: 1.8;
+    font-size: clamp(16px, 2.5vh, 22px); line-height: 1.8;
     color: var(--gold); max-width: 30em; text-wrap: balance;
     margin-bottom: clamp(10px, 2.4vh, 24px);
   }
@@ -119,11 +119,6 @@
   .verse-ref {
     display: block; font-family: "Tajawal", sans-serif;
     font-size: clamp(10px, 1.3vh, 12px); color: var(--muted); line-height: 1.4;
-  }
-  .eyebrow {
-    font-size: clamp(11px, 1.6vh, 13px); font-weight: 500;
-    letter-spacing: .28em; text-transform: uppercase;
-    color: var(--ink);
   }
   .names {
     font-family: var(--serif); font-weight: 400;
@@ -233,7 +228,6 @@
     animation: rise 1.3s var(--ease-out) forwards; will-change: opacity, transform; }
   .card::before { opacity: 0; transform: scale(.97); animation: frame-in 1.6s var(--ease-out) .1s forwards; }
   .card > .verse { animation-delay: .15s; }
-  .card > .eyebrow { animation-delay: .3s; }
   /* names: groom, then bride, then the gold "&" settles in between */
   .card > .names { opacity: 1; transform: none; animation: none; }
   .names > span { display: inline-block; opacity: 0; transform: translate3d(0, 18px, 0);
@@ -274,11 +268,10 @@
     --serif: "Amiri", "Cormorant Garamond", serif;
     --sans: "Tajawal", "Jost", sans-serif;
   }
-  html[dir="rtl"] .eyebrow, html[dir="rtl"] .lbl, html[dir="rtl"] .detail h3,
+  html[dir="rtl"] .lbl, html[dir="rtl"] .detail h3,
   html[dir="rtl"] .btn, html[dir="rtl"] .date-sub {
     letter-spacing: 0; text-transform: none;
   }
-  html[dir="rtl"] .eyebrow { font-size: clamp(15px, 2.1vh, 18px); color: var(--ink); font-weight: 500; }
   html[dir="rtl"] .lbl { font-size: clamp(11px, 1.5vh, 13px); }
   html[dir="rtl"] .detail h3 { font-size: clamp(12px, 1.6vh, 14px); }
   html[dir="rtl"] .map-link { letter-spacing: 0; text-transform: none; font-size: clamp(12px, 1.6vh, 14px); font-weight: 500; }
@@ -331,7 +324,7 @@
     .nav { display: none; }
     .card { padding-inline: 16px; }
     .names { font-size: min(clamp(34px, 6.4vh, 60px), 11.5vw); }
-    .verse { font-size: min(clamp(14px, 2vh, 18px), 4.2vw); line-height: 1.75; margin-bottom: clamp(8px, 1.6vh, 16px); padding-inline: 8px; }
+    .verse { font-size: min(clamp(15px, 2.2vh, 19px), 4.5vw); line-height: 1.75; margin-bottom: clamp(8px, 1.6vh, 16px); padding-inline: 8px; }
     .num { font-size: clamp(26px, 4.6vh, 44px); }
     .details { grid-template-columns: 1fr 1px 1fr; }
   }
@@ -378,7 +371,6 @@
       <span id="expandTxt"></span>
     </button>
     <p class="verse" lang="ar" dir="rtl"><span class="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>﴿ رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا ﴾<small class="verse-ref">سورة الفرقان · ٧٤</small></p>
-    <p class="eyebrow" data-i18n="eyebrow"></p>
     <h1 class="names"><span data-i18n="groom"></span><span class="amp" data-i18n="amp"></span><span data-i18n="bride"></span></h1>
     <p class="date">12 · 12 · 2026</p>
     <p class="date-sub" data-i18n="dateSub"></p>
@@ -447,7 +439,6 @@
 
   const TEXT = {
     en: {
-      eyebrow: "Together with their families",
       groom: "Ibrahim", amp: "&", bride: "Amani",
       dateSub: "Saturday · December",
       days: "Days", hours: "Hours", min: "Min", sec: "Sec",
@@ -462,7 +453,6 @@
       expandShort: "Full screen", collapseShort: "Photos",
     },
     ar: {
-      eyebrow: "بحضور الأهل والأحبّة",
       groom: "إبراهيم", amp: "و", bride: "أماني",
       dateSub: "السبت · كانون الأول",
       days: "يوم", hours: "ساعة", min: "دقيقة", sec: "ثانية",
